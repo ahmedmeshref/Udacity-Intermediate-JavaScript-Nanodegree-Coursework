@@ -1,3 +1,5 @@
+"use strict";
+
 export default function Animal (name, age) {
     this.name = name;
     this.age = age;
@@ -15,8 +17,8 @@ Animal.prototype.getAge = function () {
 // Create a new instance 
 const biso = new Animal('biso', 1);
 
-// Use biso's methods and properties
-console.log(biso.__proto__ == Animal.prototype);
-console.log(biso.age);
-console.log(biso.getAge());
-console.log(biso.walk());
+// // Use biso's methods and properties
+// console.log(biso.__proto__ == Animal.prototype);
+// console.log(biso.age);
+// console.log(biso.getAge());
+// console.log(biso.walk());
