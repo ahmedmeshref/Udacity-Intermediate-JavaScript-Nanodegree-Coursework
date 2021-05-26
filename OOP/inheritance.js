@@ -2,7 +2,7 @@
 import Animal from './classes.js';
 
 // Cat inhert from Animal class  
-function Cat(name, age, species) {
+export default function Cat(name, age, species) {
     Animal.call(this, name, age);
     this.species = species;
 }
@@ -19,7 +19,7 @@ Cat.prototype.miaw = function () {
 const koky = new Cat('koky', 1, 'Calico');
 
 // Test implementation 
-console.log(koky.age);
-console.log(koky.miaw());
-console.log(koky.getAge());
-console.log(koky.walk());
+// console.log(koky.age);
+// console.log(koky.miaw());
+// console.log(koky.getAge());
+// console.log(koky.walk());
