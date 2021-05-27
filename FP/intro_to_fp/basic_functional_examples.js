@@ -16,7 +16,7 @@ function getHour() {
 /**
  * Parse the current time and return "good afternoon" is its afternoon and "good morning" otherwise.  
  */
-function determineGreeting() {
+function determineGreet() {
     let time = getHour();
     if (time >= 12 && time <= 3) {
         return "good afternoon";
@@ -28,11 +28,11 @@ function determineGreeting() {
 /** 
  * Greet the user with a giving message
  */
-function greeting(greetMsg) {
+function greet(greetMsg) {
     return greetMsg;
 }
 
-console.log(greeting(determineGreeting()))
+console.log(greet(determineGreet()))
 
 // -----------------------------------------------------------------
 // Exercise 2
