@@ -3,11 +3,11 @@ const start = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // your code
 function reverseArray(arr) {
-    let reversed = arr.map((val, ind) => {
-
-    })
+    let reversedArr = [...arr].reverse();
+    return reversedArr;
 }
 
+console.log(reverseArray(start));
 // expected output: Array [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 // ----------------------------------------------------------
@@ -59,8 +59,10 @@ console.log(eleInd(sci_fi_shows));
 const numbers = [1, 2, 3, 4]
 
 // your code
+function multidimensionalArr (arr) {
+    return arr.map((val, ind, array) => array);
+}
 
+console.log(multidimensionalArr(numbers));
 // expected output: Array [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]
 
-// Having trouble with creating a 2D array? 
-// Take a closer look at the last two arguments of map, one of them might be able to help
