@@ -1,6 +1,6 @@
 // 1. TODO
-["1", "2", "3"].map(parseInt)
-
+let intArr = ["1", "2", "3"].map(val => parseInt(val));
+console.log(intArr);
 
 // ----------------------------------------------------------
 // REAL LIFE EXERCISES
@@ -10,12 +10,23 @@
 // of the id for the races below. Use map to grab those values and create a new array with them.
 
 var index = [
-    {key: 1, sector: 10, t_score: 18, id: '1236n7e8', value: 'Klingon'},
-    {key: 4, sector: 145, t_score: 12, id: '293847hs8', value: 'Minbari'},
-    {key: 8, sector: 214, t_score: 5, id: '283hy8347', value: 'Cylon'},
-    {key: 3, sector: 8346, t_score: 10, id: 'n9837ks857', value: 'Jawa'},
+    { key: 1, sector: 10, t_score: 18, id: '1236n7e8', value: 'Klingon' },
+    { key: 4, sector: 145, t_score: 12, id: '293847hs8', value: 'Minbari' },
+    { key: 8, sector: 214, t_score: 5, id: '283hy8347', value: 'Cylon' },
+    { key: 3, sector: 8346, t_score: 10, id: 'n9837ks857', value: 'Jawa' },
 ]
 
+function format(arr) {
+    let res = arr.map((obj) =>  {
+        return {
+            id: obj["id"].slice(0, 3),
+            value: obj["value"]
+        };
+    });
+    return res;
+}
+
+console.log(format(index));
 // Expected Output:
 // [
 //     {id: '123', value: 'Klingon'},
