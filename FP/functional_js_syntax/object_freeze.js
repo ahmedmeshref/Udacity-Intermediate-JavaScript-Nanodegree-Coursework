@@ -17,14 +17,8 @@ const currentShow = {
 // as a const, we can do this:
 currentShow.currentSeason = 5
 
-// but if we freeze the object
+// Freezing the object leads to inability to edit/delete/create properities. 
 Object.freeze(currentShow);
 
 currentShow.currentSeason = 5;
 // Throws an error and current_season remains unchanged
-
-
-// OBJECT FREEZE EXERCISE
-
-// ----------------------------------------------------------
-// Directions: Create your own object and freeze it!

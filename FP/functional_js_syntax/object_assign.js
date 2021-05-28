@@ -24,21 +24,5 @@ const incomingState = {
     history: ["Browncoat sergeant"]
 }
 
-state = Object.assign(state, incomingState);
 // Object.assign(target, source)
-
-// Resulting object
-// state = { 
-//     name: "Mal", 
-//     ship: { 
-//         name: "Serenity", 
-//         class: "Firefly" 
-//     }, 
-//     role: "Captain", 
-//     favoriteThing: { 
-//         item: "Not complicated" 
-//     }, 
-//     history: ["Browncoat sergeant"] 
-// } 
-
-// Your Code here
+state = Object.assign(state, incomingState);
