@@ -2,12 +2,16 @@
 const words = ['tardis', 'grok', 'frak', 'blaster', 'klingon', 'shepherd']
 
 // expected output: Array ['shepherd']
+let wordsFiltered = words.filter(word => word == "shepherd");
+console.log(wordsFiltered);
 
 // ----------------------------------------------------------
 // 2. Find all even values
-const words = [12, 13, 14, 15, 16, 17]
+const numbers = [12, 13, 14, 15, 16, 17]
 
 // expected output: Array [12, 14, 16]
+let evenNums = numbers.filter(num => num % 2 == 0);
+console.log(evenNums);
 
 // ----------------------------------------------------------
 // REAL LIFE EXAMPLES
@@ -41,6 +45,9 @@ const hunters = [
         status: 'active',
     },
 ]
+
+let activeHunters = hunters.filter(hunter => hunter.status == 'active');
+console.log(activeHunters);
 
 // expected output: Array [
 //     {
