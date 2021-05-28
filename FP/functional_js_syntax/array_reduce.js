@@ -1,8 +1,12 @@
 // 1. Take this disjointed sentence and turn it into a single string
 const text = ['The ships', 'hung in the sky,', 'much the way', 'that bricks don`t']
 
-// Your Code Here
+function join(strsArr) {
+    let sentence = strsArr.reduce((currSentence, currVal) => currSentence + ' ' + currVal);
+    return sentence;
+}
 
+console.log(join(text));
 // expected output: "The ships hung in the sky, much the way that bricks don't"
 
 // ----------------------------------------------------------
@@ -23,11 +27,18 @@ const scores = [
     },
     {
         team: 'D',
-        score: 13
+        score: 27
     }
 ]
 
 // Your Code Here
+let determineWinner = (currWinner, currTeam) => currWinner.score < currTeam.score ? currTeam : currWinner;
+
+function getWinner(teams) {
+    let winningTeam = teams.reduce(determineWinner);
+    return winningTeam.team;
+}
+console.log(getWinner(scores));
 
 // expected output: "C"
 
@@ -58,5 +69,19 @@ const ships = [
 ]
 
 // Your Code Here
+function determineFastest (currFastest, currShip) {
+    if (parseFloat(currFastest.speed) < parseFloat(currShip.speed)) {
+        return currShip;
+    }
+    else {
+        return currFastest;
+    } 
+} 
 
+function getFastestShip(shipsArr) {
+    let fastestShip = shipsArr.reduce(determineFastest);
+    return fastestShip.name;
+}
+
+console.log(getFastestShip(ships));
 // Expected output: Tie Fighters

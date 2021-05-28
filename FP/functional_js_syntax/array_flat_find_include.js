@@ -11,11 +11,12 @@ const characters = [
     ['Professor X', 'Wolverine', 'Quicksilver', ['Magneto']]
 ]
 
-const results = characters.flat(1)
+// const results = characters.flat(1)
 // const results = characters.flat(2)
 // const results = characters.flat(3)
 // And what happens if you go past the max depth of the array?
-// const results = characters.flat(5)
+const results = characters.flat(5)
+console.log(results);
 
 // ----------------------------------------------------------
 // FIND EXERCISE
@@ -32,6 +33,8 @@ const ids = [
     'ABCKO',
     'IUABC'
 ]
+
+console.log(ids.find(x => x.includes('ABC')));
 
 
 // ----------------------------------------------------------
@@ -50,7 +53,10 @@ const admins = [
     '029834zmnv9jhgfu2ab',
     '12mnz09v87bas78fb12',
     '098Xc8x76m3nb4aposi'
-]
+];
+
+console.log(admins.includes(currentUserId));
+
 
 // ----------------------------------------------------------
 
@@ -64,7 +70,8 @@ const A = [
     '29nv283bfc0szn16723',
     '029834zmnv9jhgfu2ab',
     '12mnz09v87bas78fb12',
-    '098Xc8x76m3nb4aposi'
+    '098Xc8x76m3nb4aposi',
+    '298374naskdj273ubsl'
 ]
 
 const B = [
@@ -75,3 +82,6 @@ const B = [
     '298374naskdj273ubsl',
     '098LKJnsvijevkwejf6'
 ]
+
+// get all ids in A that exists in B
+console.log(A.filter(id => B.includes(id)));

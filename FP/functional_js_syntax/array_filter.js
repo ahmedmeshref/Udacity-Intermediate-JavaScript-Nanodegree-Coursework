@@ -2,7 +2,7 @@
 const words = ['tardis', 'grok', 'frak', 'blaster', 'klingon', 'shepherd']
 
 // expected output: Array ['shepherd']
-let wordsFiltered = words.filter(word => word == "shepherd");
+let wordsFiltered = words.filter(word => word.length > 7);
 console.log(wordsFiltered);
 
 // ----------------------------------------------------------
@@ -10,7 +10,7 @@ console.log(wordsFiltered);
 const numbers = [12, 13, 14, 15, 16, 17]
 
 // expected output: Array [12, 14, 16]
-let evenNums = numbers.filter(num => num % 2 == 0);
+let evenNums = numbers.filter(num => num % 2 === 0);
 console.log(evenNums);
 
 // ----------------------------------------------------------
@@ -46,7 +46,7 @@ const hunters = [
     },
 ]
 
-let activeHunters = hunters.filter(hunter => hunter.status == 'active');
+let activeHunters = hunters.filter(hunter => hunter.status === 'active');
 console.log(activeHunters);
 
 // expected output: Array [
