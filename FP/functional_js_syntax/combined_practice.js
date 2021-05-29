@@ -99,8 +99,11 @@ const characters = [
 // ----------------------------------------------------------
 
 // Create an array containing only the names of Captains from all universes.
+function getCaptain(obj) {
+  return obj.filter(val => val.role === 'Captain').map(val => val.name);
+}
 
-// Your Code here
+console.log(getCaptain(characters))
 
 // expected output: ['Mal Reynolds', 'Kathryn Janeway']
 
@@ -111,8 +114,23 @@ const characters = [
 // ----------------------------------------------------------
 
 // Group all characters by universe in a multidimensional array
+const groupByUniverse = characters
+    .reduce((universeObj, curr, i, arr) => {
+        if (!universeObj[curr.universe]) {
+          universeObj[curr.universe] = []
+        }  
+        universeObj[curr.universe].push(curr);
+        
+        // return an array at the last call 
+        if (i + 1 == arr.length) {
+            return Object.values(universeObj);
+        }
 
-// Your Code here
+        return universeObj;
+ }, {})
+
+ console.log('----------------------------------------------------------')
+ console.log(groupByUniverse);
 
 // expected output:
 
@@ -194,7 +212,9 @@ const characters = [
 
 // Create an array containing characters' names who are the only character listed in their universe.
 
-// Your Code here
+const onlyCharactersInUniverse = groupByUniverse.filter(group => group.length == 1).map(group => group[0].name);
+console.log('----------------------------------------------------------');
+console.log(onlyCharactersInUniverse);
 
 // expected output: [ Marvin the Paranoid Android, Peter Venkman, Dr. Daniel Jackson ]
 
@@ -205,7 +225,16 @@ const characters = [
 // ----------------------------------------------------------
 
 // What is the average power level across all characters?
+function getSum(arr) {
+  return arr.reduce((currTotal, currVal) => currTotal + currVal);
+}
 
-// Your code here
+function avgPower(characters) {
+  const power_levels = characters.map(character => character.power_level);
+  const total_power = getSum(power_levels);
+  return total_power / characters.length;
+}
 
+console.log('----------------------------------------------------------');
+console.log(avgPower(characters));
 // expected output: 68.71319452795147
