@@ -18,25 +18,9 @@ const render = root => {
     root.innerHTML = App()
 };
 
-render(root);
 
 // Add a new Menu component that takes in a show argument which is either true or false
-// Show this content if show is true:
-{/* <nav>
-    <ul>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Login</li>
-    </ul>
-</nav> */}
-
-// and this content if show is false:
-{/* <nav>Menu</nav> */ }
-
-
-
-// Your Code Here
-const Menu = ((menu, show)  => {
+const Menu = (menu, show) => {
     const populateMenu = () => {
         if (show) {
             return `<nav>
@@ -52,4 +36,10 @@ const Menu = ((menu, show)  => {
     }
     menu.innerHTML = populateMenu();
     return true;
-})(menu, true);
+};
+
+// Populate the root element on Load
+window.addEventListener('load', () => {
+    render(root);
+    Menu(menu, true);
+})
