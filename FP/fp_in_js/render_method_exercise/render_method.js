@@ -1,6 +1,7 @@
 // Here is the code from the example text
 
-const root = document.getElementById('root')
+const root = document.getElementById('root');
+const menu = document.getElementById('menu');
 
 const Welcome = () => {
     return `Welcome to my Javascript Program!`
@@ -15,9 +16,9 @@ const App = () => {
 
 const render = root => {
     root.innerHTML = App()
-}
+};
 
-render(root)
+render(root);
 
 // Add a new Menu component that takes in a show argument which is either true or false
 // Show this content if show is true:
@@ -32,4 +33,23 @@ render(root)
 // and this content if show is false:
 {/* <nav>Menu</nav> */ }
 
+
+
 // Your Code Here
+const Menu = ((menu, show)  => {
+    const populateMenu = () => {
+        if (show) {
+            return `<nav>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Login</li>
+                </ul>
+            </nav>`
+        } else {
+            return `<nav>Menu</nav>`;
+        }
+    }
+    menu.innerHTML = populateMenu();
+    return true;
+})(menu, true);
