@@ -1,39 +1,33 @@
 // import immutablejs.js
 const Immutable = require('immutable');
 
+
 // PART 1. Getting and Setting values
 // Given the following object, make an update that turns name to 'Mal' and role to 'Captain'
-const map1 = Immutable.Map({ 
+const map1 = Immutable.Map({
   name: 'Wash',
   ship: {
-      name: 'Serenity',
-      class: 'Firefly'
+    name: 'Serenity',
+    class: 'Firefly'
   },
   role: 'Pilot',
   favoriteThing: {
-      item: "Toy",
-      details: {
-          type: 'Toy Tyrannosaurus Rex'
-      }
+    item: "Toy",
+    details: {
+      type: 'Toy Tyrannosaurus Rex'
+    }
   }
 });
 
-const map2 = Immutable.Map({
-  name: 'Mal',
-  role: 'Captain',
-  favoriteThing: {
-      item: "Not complicated"
-      },
-  history: ["Browncoat sergeant"]
-});
+map2 = map1.set("name", 'Mal').set('role', 'Captain');
 
 // YOUR TURN --------------------------------------------------------------
 // create `map3` immutable object by merging `map1` and `map2`
+const map3 = map1.merge(map2);
 
 console.log(map1.toJS())
 console.log(map2.toJS())
 console.log(map3.toJS())
-
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -47,15 +41,12 @@ const obj = { d: 100, o: 200, g: 300 };
 const map4 = map1.merge(map2, obj);
 
 // But also notice how different the two are when we console log map3 
-console.log(map4.toJS())
+console.log(map4.toJS());
 
 // YOUR TURN --------------------------------------------------------------
 // Can you locate the contents of our variable 'obj' inside the Immutable Map map3?
+console.log(map3);
 
-//Your code
-
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
 
 // PART 3. Arrays and Immutable Lists
 
@@ -63,12 +54,12 @@ console.log(map4.toJS())
 const numbers = Immutable.List([1, 2, 3]);
 
 // We can turn normal JS arrays into Immutable Lists like this:
-const plainArray = [ 1, 2, 3, 4 ]
+const plainArray = [1, 2, 3, 4]
 const listFromPlainArray = Immutable.List(plainArray)
 console.log(listFromPlainArray.toJS())
 
 // we can declare a new Immutable List
-const myList = Immutable.List([ 'stuffed t-rex' ]);
+const myList = Immutable.List(['stuffed t-rex']);
 console.log(Array.from(myList));
 
 // and we can use the set method again to add or update values. Just provide the index first and value second
@@ -83,14 +74,6 @@ console.log(Array.from(myList2));
 
 // 1. Turn the following array into an Immutable array
 // 2. Add a character
-
-// Your code
-
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-
-
-// STRETCH CHALLENGE ----------------------------------------------------------------------
 // 3. Remove Jabba the Hut from the Immutable List
 // look up in the documentation how you would remove a character from the Immutable list
 
@@ -107,7 +90,7 @@ const characters = [
     role: 'villain',
     universe: 'Star Wars',
     weapon: 'henchmen',
-    powerLevel:  200
+    powerLevel: 200
   },
   {
     name: 'Zoë Alleyne Washburne',
@@ -131,3 +114,12 @@ const characters = [
     power_level: 140
   }
 ]
+
+const immutableChars = Immutable.List(characters).push(
+  {
+    name: 'Meshref',
+    role: 'leader'
+  }
+);
+const jabbaRemoved = immutableChars.delete(1);
+console.log(jabbaRemoved);
