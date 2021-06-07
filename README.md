@@ -39,5 +39,5 @@ JavaScript frameworks like React, Angular, and Vue.
 ### TODO
 
 - Add the missing projects (AP, OOP)
-- Redo the OOP course and restructure its challenges
-- Post on Facebook & LinkedIn 
+- OOP course - restructure its challenges
+- Post for people 
