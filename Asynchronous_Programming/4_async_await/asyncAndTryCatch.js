@@ -76,11 +76,9 @@ const printStatusMessage = async (status) => {
         const animalsList = await animalsByConservationStatus(status);
         message = `Animals listed as ${status} are: ${animalsList.join(', ')}`;
         console.log(message);
-    }
-    catch (err) {
+    } catch (err) {
         console.log('Error:', err);
-    }
-    finally {
+    } finally {
         console.log('-------DONE TASK 1-------');
     }
 }
@@ -102,11 +100,9 @@ const printAnimalMessage = async (animal) => {
         const message = `The ${info.common_name} has an endangered status of ${info.status}`;
         console.log(message);
 
-    }
-    catch (err) {
+    } catch (err) {
         console.log('Error:', err);
-    }
-    finally {
+    } finally {
         console.log('-------DONE TASK 2-------');
     }
 };
@@ -126,11 +122,9 @@ const printAnimalFacts = async (animal) => {
         const data = await fetchAnimalByName(animal);
         const message = `The ${data.common_name} (${data.species}) is an endangered animal with ${data.population} individuals in the wild in their home region of ${data.region}`;
         console.log(message);
-    }
-    catch (err) {
+    } catch (err) {
         console.log('Error:', err);
-    }
-    finally {
+    } finally {
         console.log(`Search completed: ${animal}`)
         console.log('-------DONE TASK 3-------');
     }
@@ -181,9 +175,9 @@ const printAnimalRegionsPromises = (status) => {
             console.log(`Error: ${err}`);
         })
         .finally(() => {
-        console.log(`Found all regions with animals of status: ${status}`)
-        console.log('-------DONE TASK 4-------');
-    });
+            console.log(`Found all regions with animals of status: ${status}`)
+            console.log('-------DONE TASK 4-------');
+        });
 };
 
 printAnimalRegionsPromises("critical");
