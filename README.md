@@ -9,13 +9,15 @@
 
 ### Nanodegree Goal
 
-The goal of the Intermediate JavaScript Nanodegree program is to prepare students for roles in web development,
-server-side application development, and desktop development that require a more advanced set of JavaScript skills. This
-program will also prepare students with the skills required to use JavaScript frameworks like React, Angular, and Vue.
+The Intermediate JavaScript Nanodegree program aims to prepare students for web development, server-side application
+development, and desktop development that requires a more advanced set of JavaScript skills such as OOP, Functional
+Programing, and Asynchronous Programming This program will also prepare students with the skills required to use
+JavaScript frameworks like React, Angular, and Vue.
 
 ### Nanodegree Courses
 
-For each course, all exercises are provided, under the course-work, as well as the final project. 
+> Exercises, course-work, by lesson as well as the final project are provided for each course.
+ 
 <ol>
 <li>Object Oriented JavaScript</li>
     <ul>
@@ -34,8 +36,8 @@ For each course, all exercises are provided, under the course-work, as well as t
     </ul>
 </ol>
 
+### TODO
 
-### TODO 
 - Add the missing projects (AP, OOP)
 - Redo the OOP course and restructure its challenges
 - Post on Facebook & LinkedIn 
