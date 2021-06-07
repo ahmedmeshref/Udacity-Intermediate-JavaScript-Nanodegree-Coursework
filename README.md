@@ -35,7 +35,7 @@ For each course, all exercises are provided, under the course-work, as well as t
 </ol>
 
 
-###TODO 
+### TODO 
 - Add the missing projects (AP, OOP)
 - Redo the OOP course and restructure its challenges
 - Post on Facebook & LinkedIn 
