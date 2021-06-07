@@ -5,7 +5,7 @@ const promise1 = () => new Promise((resolve, reject) => {
 });
 
 const promise2 = () => new Promise((resolve, reject) => {
-    setTimeout(resolve, 2000, 23);
+    setTimeout(reject, 2000, 23);
 });
 
 // Challenge 1
@@ -29,10 +29,18 @@ function sumVals(p1, p2) {
 // Console log: "The answer to life, the universe, and everything is: 42"
 
 async function sumValsAsyncAwait(p1, p2) {
-    const val1 = await p1;
-    const val2 = await p2;
-    console.log(`The answer to life, the universe, and everything is: ${val1 + val2}`);
+    try {
+        const val1 = await p1;
+        const val2 = await p2;
+        console.log(`The answer to life, the universe, and everything is: ${val1 + val2}`);
+    }
+    catch (err) {
+        console.log('Some resources got rejected!');
+    }
 }
 
 sumVals(promise1(), promise2());
-sumValsAsyncAwait(promise1(), promise2())
+sumValsAsyncAwait(promise1(), promise2());
+
+
+// Note the behavior of the two funcs is different when one of the resources gets rejects. 
