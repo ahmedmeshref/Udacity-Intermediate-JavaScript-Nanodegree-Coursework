@@ -17,7 +17,7 @@ JavaScript frameworks like React, Angular, and Vue.
 ### Nanodegree Courses
 
 > Exercises, course-work, by lesson as well as the final project are provided for each course.
- 
+
 <ol>
 <li>Object Oriented JavaScript</li>
     <ul>
@@ -39,5 +39,5 @@ JavaScript frameworks like React, Angular, and Vue.
 ### TODO
 
 - Add the missing projects (AP, OOP)
-- Redo the OOP course and restructure its challenges
-- Post on Facebook & LinkedIn 
+- OOP course - restructure its challenges
+- Post for people 
