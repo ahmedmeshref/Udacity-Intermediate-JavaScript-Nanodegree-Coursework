@@ -5,8 +5,7 @@ function test(arr, callback) {
     }
 }
 
-
-function isPositive (val) {
+function isPositive(val) {
     return val > 0 ? val : false;
 }
 
