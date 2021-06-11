@@ -1,6 +1,6 @@
 // Functions are first class in JS which means they could be:
-// 1- Passed to other functions (callbacks). 
 
+// 1- Passed to other functions (callbacks). 
 function getPositiveValues(arr, callback) {
     arr.forEach(val => {
         console.log(callback(val));

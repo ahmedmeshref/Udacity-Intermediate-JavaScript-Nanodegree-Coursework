@@ -10,7 +10,7 @@ export default function Cat(name, age, species) {
 // Inhert prototype from Animal
 Cat.prototype = Object.create(Animal.prototype);
 
-// Extend the prototype of Cat
+// Extend the prototype of Cat with new methods 
 Cat.prototype.miaw = function () {
     return `${this.name} says miaw!`;
 }

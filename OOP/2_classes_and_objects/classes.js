@@ -1,11 +1,12 @@
 "use strict";
 
+// Contructor Function 
 export default function Animal (name, age) {
     this.name = name;
     this.age = age;
 }
 
-// Extend Animal prototype 
+// Extend Animal prototype (Better performance than defining the method inside of the constructor function)
 Animal.prototype.walk = function () {
     return `${this.name} is walking.`;
 }
