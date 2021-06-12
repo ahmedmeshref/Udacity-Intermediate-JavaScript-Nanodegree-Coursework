@@ -13,7 +13,7 @@ function CoffeeMaker(object) {
 
 
 function IceCreamMaker(object) {
-    // _flavor is private 
+    // _flavor is a private variable 
     let _flavor = 'mango';
 
     return Object.assign({}, object, {
@@ -30,8 +30,9 @@ function IceCreamMaker(object) {
 // banana.flavor = 'banana';
 // console.log(banana.flavor);
 
-// Test using factory inhertance
+// Factory extends CoffeeMaker with IceCreamMaker
 const iceCoffee = CoffeeMaker(IceCreamMaker({}));
 console.log(iceCoffee); 
 iceCoffee.flavor = 'coffee';
 console.log(iceCoffee.flavor);
+console.log(iceCoffee.isEmpty());
